@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="B1A-0b-4MF">
+                                <rect key="frame" x="20" y="80" width="560" height="105"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJe-yR-rSE">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kB0-cW-NJm">
+                                        <rect key="frame" x="0.0" y="33" width="560" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-q6-H1N">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Bp4-q6-H1N" secondAttribute="trailing" constant="20" id="8ny-zu-dyn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bp4-q6-H1N" secondAttribute="trailing" id="COV-YB-P2J"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leading" constant="20" id="D2Z-p5-jcD"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leading" id="G1J-Pu-yZb"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="trailing" secondItem="kB0-cW-NJm" secondAttribute="trailingMargin" id="OAW-RH-rtr"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="trailing" secondItem="kB0-cW-NJm" secondAttribute="trailingMargin" id="Rpa-Wx-bNc"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leadingMargin" id="iST-iR-lhd"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leadingMargin" id="teX-a8-xol"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9fe-ks-mvS">
+                                        <rect key="frame" x="0.0" y="75" width="141" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-0T-KS6">
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-HU-JdK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hs-9K-CTT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
+                                                                <state key="normal" title="Set default label text"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVc-9a-w9E">
+                                <rect key="frame" x="20" y="0.0" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LVc-9a-w9E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3cI-RD-GTY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B1A-0b-4MF" secondAttribute="trailing" id="W8h-ww-Nzn"/>
+                            <constraint firstItem="B1A-0b-4MF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="axF-jK-xVm"/>
+                            <constraint firstItem="LVc-9a-w9E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bR4-u8-b73"/>
+                            <constraint firstItem="B1A-0b-4MF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ymL-l4-tNz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="289" y="279"/>
         </scene>
     </scenes>
 </document>
