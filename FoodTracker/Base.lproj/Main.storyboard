@@ -37,13 +37,17 @@
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Bp4-q6-H1N" secondAttribute="trailing" id="8hH-CR-GX8"/>
                                             <constraint firstAttribute="trailing" secondItem="Bp4-q6-H1N" secondAttribute="trailing" constant="20" id="8ny-zu-dyn"/>
                                             <constraint firstAttribute="trailing" secondItem="Bp4-q6-H1N" secondAttribute="trailing" id="COV-YB-P2J"/>
                                             <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leading" constant="20" id="D2Z-p5-jcD"/>
+                                            <constraint firstAttribute="width" constant="560" id="DB1-Dv-ZY0"/>
                                             <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leading" id="G1J-Pu-yZb"/>
                                             <constraint firstItem="Bp4-q6-H1N" firstAttribute="trailing" secondItem="kB0-cW-NJm" secondAttribute="trailingMargin" id="OAW-RH-rtr"/>
                                             <constraint firstItem="Bp4-q6-H1N" firstAttribute="trailing" secondItem="kB0-cW-NJm" secondAttribute="trailingMargin" id="Rpa-Wx-bNc"/>
+                                            <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leading" id="UED-gb-k6F"/>
                                             <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leadingMargin" id="iST-iR-lhd"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="560" id="m4c-TZ-O0n"/>
                                             <constraint firstItem="Bp4-q6-H1N" firstAttribute="leading" secondItem="kB0-cW-NJm" secondAttribute="leadingMargin" id="teX-a8-xol"/>
                                         </constraints>
                                     </stackView>
@@ -59,6 +63,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hs-9K-CTT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
                                                                 <state key="normal" title="Set default label text"/>
+                                                                <connections>
+                                                                    <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSc-0q-abV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -67,22 +74,25 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kB0-cW-NJm" firstAttribute="leading" secondItem="B1A-0b-4MF" secondAttribute="leading" id="5Sj-MC-kUW"/>
+                                    <constraint firstAttribute="trailing" secondItem="kB0-cW-NJm" secondAttribute="trailing" id="cCI-7f-3rG"/>
+                                    <constraint firstAttribute="trailing" secondItem="kB0-cW-NJm" secondAttribute="trailing" id="ibg-QF-a4C"/>
+                                    <constraint firstItem="kB0-cW-NJm" firstAttribute="leading" secondItem="B1A-0b-4MF" secondAttribute="leading" id="yFQ-G0-9fS"/>
+                                </constraints>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVc-9a-w9E">
-                                <rect key="frame" x="20" y="0.0" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LVc-9a-w9E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3cI-RD-GTY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B1A-0b-4MF" secondAttribute="trailing" id="W8h-ww-Nzn"/>
                             <constraint firstItem="B1A-0b-4MF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="axF-jK-xVm"/>
-                            <constraint firstItem="LVc-9a-w9E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bR4-u8-b73"/>
                             <constraint firstItem="B1A-0b-4MF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ymL-l4-tNz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="DJe-yR-rSE" id="P1m-G2-52g"/>
+                        <outlet property="nameTextField" destination="Bp4-q6-H1N" id="OMS-da-v6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
