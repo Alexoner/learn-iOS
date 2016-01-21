@@ -115,5 +115,20 @@ class MealTableViewController: UITableViewController {
     // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: Actions
+    
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+        // try to downcast the source view controller of the segue to type MealViewController
+        if let sourceViewController = sender.sourceViewController as?
+            MealViewController, meal = sourceViewController.meal {
+                // add a new meal
+                let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
+                meals.append(meal)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
+    
+
 
 }

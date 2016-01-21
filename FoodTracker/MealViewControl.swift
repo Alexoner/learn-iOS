@@ -15,6 +15,13 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    /*
+    This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
+    or constructed as part of adding a new meal.
+    */
+    var meal: Meal?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +29,9 @@ class MealViewController: UIViewController, UITextFieldDelegate,
 
         // Handle text field's user input through delegate callbacks.
         nameTextField.delegate = self
+        
+        // enable the save button only if the text field has a valid meal name
+        checkValidMealName()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,9 +47,21 @@ class MealViewController: UIViewController, UITextFieldDelegate,
         textField.resignFirstResponder()
         return true
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        // disable the save button while editing
+        saveButton.enabled = false
+    }
+    
+    func checkValidMealName() {
+        // disable the save button if the text field is empty
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+    }
 
     func textFieldDidEndEditing(textField: UITextField) {
-
+        checkValidMealName()
+        navigationItem.title = textField.text
     }
 
     // MARK: UIImagePickerControllerDelegate
@@ -57,6 +79,21 @@ class MealViewController: UIViewController, UITextFieldDelegate,
         photoImageView.image = selectedImage
         // dismiss the picker
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: navigation
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // configure a view controller before it's presented
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if saveButton === sender {
+            let name = nameTextField.text ?? ""
+            let photo = photoImageView.image
+            let rating = ratingControl.rating
+            meal = Meal(name: name, photo: photo, rating: rating)
+        }
     }
 
     // MARK: Actions
@@ -76,7 +113,7 @@ class MealViewController: UIViewController, UITextFieldDelegate,
     
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
-
+    
 
 }
 
