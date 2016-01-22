@@ -55,6 +55,7 @@ class ImageScrollViewController: UIViewController, UIScrollViewDelegate {
         scrollView.zoomScale = minScale;
 
         // 6
+        centerScrollViewFrame()
         centerScrollViewContents()
 
         // show the border
@@ -65,12 +66,20 @@ class ImageScrollViewController: UIViewController, UIScrollViewDelegate {
 
     }
 
+    
+    func centerScrollViewFrame() {
+        scrollView.frame.origin.x = (scrollView.superview!.bounds.width - scrollView.frame.size.width) / 2.0
+        //scrollView.frame.origin.y = (scrollView.superview!.bounds.height - scrollView.frame.size.height) / 2.0
+        
+        //scrollView.bounds.origin.x = (scrollView.superview!.frame.width - scrollView.bounds.size.width) / 2.0
+        scrollView.bounds.origin.y = (scrollView.superview!.frame.height - scrollView.bounds.size.height) / 2.0
+    }
+
     func centerScrollViewContents() {
         let boundsSize = scrollView.bounds.size
         var contentsFrame = imageView.frame
 
         print("scroll view size: ", scrollView.bounds.size, imageView.frame.size,scrollView.superview!.frame.size)
-        print("scroll view bounds: ", scrollView.bounds.origin, "frame:",scrollView.frame.origin)
         if contentsFrame.size.width < boundsSize.width {
             contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0
         } else {
@@ -82,10 +91,6 @@ class ImageScrollViewController: UIViewController, UIScrollViewDelegate {
         } else {
             contentsFrame.origin.y = 0.0
         }
-
-        scrollView.bounds.origin.x = (scrollView.superview!.frame.width - scrollView.bounds.size.width) / 2.0
-        scrollView.bounds.origin.y = (scrollView.superview!.frame.height - scrollView.bounds.size.height) / 2.0
-        print("scroll view bounds: ", scrollView.bounds.origin)
 
         imageView.frame = contentsFrame
     }
