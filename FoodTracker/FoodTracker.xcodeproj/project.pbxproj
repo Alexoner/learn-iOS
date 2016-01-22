@@ -107,17 +107,17 @@
 		FAF242321C4C985700A6B7B1 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2428D1C5084B300A6B7B1 /* MealTableViewController.swift */,
-				FAF2428E1C5084B300A6B7B1 /* MealTableViewController.xib */,
-				FAF242331C4C985700A6B7B1 /* AppDelegate.swift */,
-				FAF242351C4C985700A6B7B1 /* MealViewController.swift */,
-				FAF242791C4F75A100A6B7B1 /* RatingControl.swift */,
-				FAF242371C4C985700A6B7B1 /* Main.storyboard */,
-				FAF2423A1C4C985700A6B7B1 /* Assets.xcassets */,
-				FAF2423C1C4C985700A6B7B1 /* LaunchScreen.storyboard */,
 				FAF2423F1C4C985700A6B7B1 /* Info.plist */,
+				FAF242331C4C985700A6B7B1 /* AppDelegate.swift */,
 				FAF242811C4F8EE100A6B7B1 /* Meal.swift */,
 				FAF242831C4F8F8100A6B7B1 /* MealTableViewCell.swift */,
+				FAF2428D1C5084B300A6B7B1 /* MealTableViewController.swift */,
+				FAF242351C4C985700A6B7B1 /* MealViewController.swift */,
+				FAF242791C4F75A100A6B7B1 /* RatingControl.swift */,
+				FAF2423A1C4C985700A6B7B1 /* Assets.xcassets */,
+				FAF2428E1C5084B300A6B7B1 /* MealTableViewController.xib */,
+				FAF2423C1C4C985700A6B7B1 /* LaunchScreen.storyboard */,
+				FAF242371C4C985700A6B7B1 /* Main.storyboard */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";

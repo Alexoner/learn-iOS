@@ -12,6 +12,7 @@
 		9C43196E1A0C32D90085829B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C43196C1A0C32D90085829B /* Main.storyboard */; };
 		9C4319701A0C32D90085829B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C43196F1A0C32D90085829B /* Images.xcassets */; };
 		9C4319731A0C32D90085829B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4319711A0C32D90085829B /* LaunchScreen.xib */; };
+		FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9C43196D1A0C32D90085829B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C43196F1A0C32D90085829B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C4319721A0C32D90085829B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		9C4319651A0C32D80085829B /* BahamaAirLoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2429D1C5232DD00A6B7B1 /* ScrollViews */,
 				9C4319681A0C32D80085829B /* AppDelegate.swift */,
 				9C43196A1A0C32D80085829B /* ViewController.swift */,
 				9C43196C1A0C32D90085829B /* Main.storyboard */,
@@ -70,6 +73,14 @@
 				9C4319671A0C32D80085829B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF2429D1C5232DD00A6B7B1 /* ScrollViews */ = {
+			isa = PBXGroup;
+			children = (
+				FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */,
+			);
+			name = ScrollViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			files = (
 				9C43196B1A0C32D80085829B /* ViewController.swift in Sources */,
 				9C4319691A0C32D80085829B /* AppDelegate.swift in Sources */,
+				FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
