@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "2"; ObjectID = "1ZW-Tb-xdI"; */
+"1ZW-Tb-xdI.text" = "2";
+
+/* Class = "UINavigationItem"; title = "table view"; ObjectID = "5ui-jW-DoH"; */
+"5ui-jW-DoH.title" = "table view";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "9gk-hf-wuJ"; */
+"9gk-hf-wuJ.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "CZ0-Kg-kBl"; */
+"CZ0-Kg-kBl.text" = "Title";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "MAN-Rj-j7W"; */
+"MAN-Rj-j7W.placeholder" = "Username";
+
+/* Class = "UITableViewSection"; footerTitle = "Footer"; ObjectID = "Pc3-fU-SO3"; */
+"Pc3-fU-SO3.footerTitle" = "Footer";
+
+/* Class = "UITableViewSection"; headerTitle = "Animation"; ObjectID = "Pc3-fU-SO3"; */
+"Pc3-fU-SO3.headerTitle" = "Animation";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "bit-Al-8Lg"; */
+"bit-Al-8Lg.normalTitle" = "Log In";
+
+/* Class = "UILabel"; text = "simple settings"; ObjectID = "cNx-xB-Dtz"; */
+"cNx-xB-Dtz.text" = "simple settings";
+
+/* Class = "UILabel"; text = "Bahama Login"; ObjectID = "mEV-bG-x0j"; */
+"mEV-bG-x0j.text" = "Bahama Login";
+
+/* Class = "UINavigationItem"; title = "login"; ObjectID = "qlb-fb-Ctb"; */
+"qlb-fb-Ctb.title" = "login";
+
+/* Class = "UITableViewSection"; footerTitle = "Footer"; ObjectID = "uii-p4-J9T"; */
+"uii-p4-J9T.footerTitle" = "Footer";
+
+/* Class = "UITableViewSection"; headerTitle = "Basic content"; ObjectID = "uii-p4-J9T"; */
+"uii-p4-J9T.headerTitle" = "Basic content";

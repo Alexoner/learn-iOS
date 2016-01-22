@@ -5,39 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Main Menu-->
-        <scene sceneID="bkf-no-RIT">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zU4-of-gRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ooW-o0-Zbx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BDt-xx-Klb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cwc-yT-9mj">
-                                <rect key="frame" x="69" y="148" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="login animation"/>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="laa-9V-If8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vb5-AH-9vQ">
-                                <rect key="frame" x="85" y="301" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="table view"/>
-                                <connections>
-                                    <segue destination="M9E-09-mm3" kind="push" id="mll-V7-aj6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Main Menu" id="eac-qQ-TWd"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="568" y="366"/>
-        </scene>
         <!--table view-->
         <scene sceneID="LDi-uc-6YU">
             <objects>
@@ -72,9 +39,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="push" id="gpN-q9-0Wa"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U1W-66-6Hq">
                                         <rect key="frame" x="0.0" y="157.5" width="320" height="44"/>
@@ -120,9 +84,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="popover" popoverAnchorView="Ob9-62-pRQ" id="GAM-rQ-mhj">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <segue destination="vXZ-lx-hvc" kind="push" id="GAM-rQ-mhj"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p2V-wH-c6y">
@@ -155,7 +117,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boe-QR-0MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973" y="555"/>
+            <point key="canvasLocation" x="567" y="366"/>
         </scene>
         <!--login-->
         <scene sceneID="ufC-wZ-h7g">
@@ -234,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="-104"/>
+            <point key="canvasLocation" x="1010" y="-98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dJS-7Q-bP0">
@@ -247,7 +209,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ooW-o0-Zbx" kind="relationship" relationship="rootViewController" id="ag4-fJ-j8H"/>
+                        <segue destination="M9E-09-mm3" kind="relationship" relationship="rootViewController" id="N0i-nE-XGM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3JV-du-XFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,7 +224,4 @@
         <image name="bg-sunny-cloud-3" width="74" height="35"/>
         <image name="bg-sunny-cloud-4" width="115" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GAM-rQ-mhj"/>
-    </inferredMetricsTieBreakers>
 </document>
