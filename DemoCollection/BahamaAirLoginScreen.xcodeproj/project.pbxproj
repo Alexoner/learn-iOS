@@ -14,6 +14,7 @@
 		9C4319731A0C32D90085829B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4319711A0C32D90085829B /* LaunchScreen.xib */; };
 		FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */; };
 		FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */; };
+		FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9C4319721A0C32D90085829B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
+		FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		FAF2429D1C5232DD00A6B7B1 /* ScrollViews */ = {
 			isa = PBXGroup;
 			children = (
+				FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */,
 				FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */,
 				FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */,
 			);
@@ -161,6 +164,7 @@
 				FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */,
 				9C43196B1A0C32D80085829B /* ViewController.swift in Sources */,
 				9C4319691A0C32D80085829B /* AppDelegate.swift in Sources */,
+				FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */,
 				FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
