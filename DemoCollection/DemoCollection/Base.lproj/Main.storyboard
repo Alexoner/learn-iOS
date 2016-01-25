@@ -159,7 +159,7 @@
         <!--login-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BahamaAirLoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DemoCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -238,7 +238,7 @@
         <!--Image scroll-->
         <scene sceneID="NLg-sx-WNy">
             <objects>
-                <viewController id="Tnw-Uu-gZO" customClass="ImageScrollViewController" customModule="BahamaAirLoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tnw-Uu-gZO" customClass="ImageScrollViewController" customModule="DemoCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rSe-Eb-aD3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +265,7 @@
         <!--Custom Scroll View Controller-->
         <scene sceneID="9PM-0z-Bie">
             <objects>
-                <viewController id="dHR-Xj-YDt" customClass="CustomScrollViewController" customModule="BahamaAirLoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dHR-Xj-YDt" customClass="CustomScrollViewController" customModule="DemoCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xUL-BY-pKU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,7 +292,7 @@
         <!--Paged Scroll View Controller-->
         <scene sceneID="6YC-sg-1ag">
             <objects>
-                <viewController id="uik-MC-w45" customClass="PagedScrollViewController" customModule="BahamaAirLoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uik-MC-w45" customClass="PagedScrollViewController" customModule="DemoCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HAs-Dr-E0B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

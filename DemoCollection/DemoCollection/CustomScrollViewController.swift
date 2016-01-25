@@ -1,6 +1,6 @@
 //
 //  CustomScrollViewController.swift
-//  BahamaAirLoginScreen
+//  DemoCollection
 //
 //  Created by duhao.dh on 1/25/16.
 //  Copyright © 2016 Razeware LLC. All rights reserved.

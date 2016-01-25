@@ -1,0 +1,5 @@
+==========move files
+for f in $(grep "Bahama" . -rl)
+do
+sed -i '' 's/BahamaAirLoginScreen/DemoCollection/g' "$f"
+done
