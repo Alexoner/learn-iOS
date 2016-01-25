@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--table view-->
+        <!--Demo Menu-->
         <scene sceneID="LDi-uc-6YU">
             <objects>
                 <tableViewController id="M9E-09-mm3" sceneMemberID="viewController">
@@ -36,15 +36,15 @@
                                             <segue destination="Tnw-Uu-gZO" kind="push" id="xUU-qr-dtN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="g8s-TB-RgK" style="IBUITableViewCellStyleDefault" id="U1W-66-6Hq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="g8s-TB-RgK" style="IBUITableViewCellStyleDefault" id="U1W-66-6Hq">
                                         <rect key="frame" x="0.0" y="157.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U1W-66-6Hq" id="vbR-RT-0YU">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Custom View Scroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g8s-TB-RgK">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -52,6 +52,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dHR-Xj-YDt" kind="push" id="aOG-Tl-NwA"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="7rF-p6-N4M" style="IBUITableViewCellStyleDefault" id="a4a-KF-Iw9">
                                         <rect key="frame" x="0.0" y="201.5" width="320" height="44"/>
@@ -142,13 +145,13 @@
                             <outlet property="delegate" destination="M9E-09-mm3" id="QYO-7X-ccC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="table view" id="5ui-jW-DoH"/>
+                    <navigationItem key="navigationItem" title="Demo Menu" id="5ui-jW-DoH"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boe-QR-0MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="366"/>
+            <point key="canvasLocation" x="547" y="366"/>
         </scene>
         <!--login-->
         <scene sceneID="ufC-wZ-h7g">
@@ -227,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-98"/>
+            <point key="canvasLocation" x="998" y="-290"/>
         </scene>
         <!--Image scroll-->
         <scene sceneID="NLg-sx-WNy">
@@ -254,7 +257,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xU6-Yq-Ppd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="526"/>
+            <point key="canvasLocation" x="998" y="338"/>
+        </scene>
+        <!--Custom Scroll View Controller-->
+        <scene sceneID="9PM-0z-Bie">
+            <objects>
+                <viewController id="dHR-Xj-YDt" customClass="CustomScrollViewController" customModule="BahamaAirLoginScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xUL-BY-pKU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="adt-Ep-fxJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dHR-Xj-YDt" id="l0C-lb-Aug"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7OD-am-Rgl"/>
+                    <connections>
+                        <outlet property="scrollView" destination="adt-Ep-fxJ" id="Xss-FP-yfR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hg-Iw-LuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="1042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dJS-7Q-bP0">

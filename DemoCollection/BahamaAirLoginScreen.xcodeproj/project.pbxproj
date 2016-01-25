@@ -13,6 +13,7 @@
 		9C4319701A0C32D90085829B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C43196F1A0C32D90085829B /* Images.xcassets */; };
 		9C4319731A0C32D90085829B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4319711A0C32D90085829B /* LaunchScreen.xib */; };
 		FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */; };
+		FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9C43196F1A0C32D90085829B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C4319721A0C32D90085829B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
+		FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */,
+				FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */,
 			);
 			name = ScrollViews;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */,
 				9C43196B1A0C32D80085829B /* ViewController.swift in Sources */,
 				9C4319691A0C32D80085829B /* AppDelegate.swift in Sources */,
 				FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */,
