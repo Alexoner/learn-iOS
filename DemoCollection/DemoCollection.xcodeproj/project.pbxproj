@@ -15,6 +15,14 @@
 		FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */; };
 		FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */; };
 		FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */; };
+		FAF242A81C560A7F00A6B7B1 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A71C560A7F00A6B7B1 /* TimeLineViewController.swift */; };
+		FAF242AA1C560ADC00A6B7B1 /* TimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A91C560ADC00A6B7B1 /* TimeLineView.swift */; };
+		FAF242BC1C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF242B11C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m */; };
+		FAF242BD1C560C7100A6B7B1 /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF242B31C560C7100A6B7B1 /* JTSImageInfo.m */; };
+		FAF242BE1C560C7100A6B7B1 /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF242B51C560C7100A6B7B1 /* JTSImageViewController.m */; };
+		FAF242BF1C560C7100A6B7B1 /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF242B71C560C7100A6B7B1 /* JTSSimpleImageDownloader.m */; };
+		FAF242C01C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF242B91C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m */; };
+		FAF242C11C560C7100A6B7B1 /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF242BB1C560C7100A6B7B1 /* UIImage+JTSImageEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,21 @@
 		FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
+		FAF242A71C560A7F00A6B7B1 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		FAF242A91C560ADC00A6B7B1 /* TimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineView.swift; sourceTree = "<group>"; };
+		FAF242AF1C560C7000A6B7B1 /* DemoCollection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoCollection-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAF242B01C560C7100A6B7B1 /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSAnimatedGIFUtility.h; path = ThirdParty/JTSImageViewController/JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		FAF242B11C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSAnimatedGIFUtility.m; path = ThirdParty/JTSImageViewController/JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		FAF242B21C560C7100A6B7B1 /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSImageInfo.h; path = ThirdParty/JTSImageViewController/JTSImageInfo.h; sourceTree = "<group>"; };
+		FAF242B31C560C7100A6B7B1 /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSImageInfo.m; path = ThirdParty/JTSImageViewController/JTSImageInfo.m; sourceTree = "<group>"; };
+		FAF242B41C560C7100A6B7B1 /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSImageViewController.h; path = ThirdParty/JTSImageViewController/JTSImageViewController.h; sourceTree = "<group>"; };
+		FAF242B51C560C7100A6B7B1 /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSImageViewController.m; path = ThirdParty/JTSImageViewController/JTSImageViewController.m; sourceTree = "<group>"; };
+		FAF242B61C560C7100A6B7B1 /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSSimpleImageDownloader.h; path = ThirdParty/JTSImageViewController/JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		FAF242B71C560C7100A6B7B1 /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSSimpleImageDownloader.m; path = ThirdParty/JTSImageViewController/JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		FAF242B81C560C7100A6B7B1 /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+JTSImageViewController.h"; path = "ThirdParty/JTSImageViewController/UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		FAF242B91C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+JTSImageViewController.m"; path = "ThirdParty/JTSImageViewController/UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		FAF242BA1C560C7100A6B7B1 /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+JTSImageEffects.h"; path = "ThirdParty/JTSImageViewController/UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		FAF242BB1C560C7100A6B7B1 /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+JTSImageEffects.m"; path = "ThirdParty/JTSImageViewController/UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +83,9 @@
 		9C4319651A0C32D80085829B /* DemoCollection */ = {
 			isa = PBXGroup;
 			children = (
+				FAF242AF1C560C7000A6B7B1 /* DemoCollection-Bridging-Header.h */,
+				FAF242AD1C560BCC00A6B7B1 /* ThirdParty */,
+				FAF242A61C5609DE00A6B7B1 /* TimeLine */,
 				FAF2429D1C5232DD00A6B7B1 /* ScrollViews */,
 				9C4319681A0C32D80085829B /* AppDelegate.swift */,
 				9C43196A1A0C32D80085829B /* ViewController.swift */,
@@ -89,6 +115,42 @@
 			name = ScrollViews;
 			sourceTree = "<group>";
 		};
+		FAF242A61C5609DE00A6B7B1 /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				FAF242A71C560A7F00A6B7B1 /* TimeLineViewController.swift */,
+				FAF242A91C560ADC00A6B7B1 /* TimeLineView.swift */,
+			);
+			name = TimeLine;
+			sourceTree = "<group>";
+		};
+		FAF242AD1C560BCC00A6B7B1 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				FAF242AE1C560BD500A6B7B1 /* JTSImageViewController */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		FAF242AE1C560BD500A6B7B1 /* JTSImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAF242B01C560C7100A6B7B1 /* JTSAnimatedGIFUtility.h */,
+				FAF242B11C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m */,
+				FAF242B21C560C7100A6B7B1 /* JTSImageInfo.h */,
+				FAF242B31C560C7100A6B7B1 /* JTSImageInfo.m */,
+				FAF242B41C560C7100A6B7B1 /* JTSImageViewController.h */,
+				FAF242B51C560C7100A6B7B1 /* JTSImageViewController.m */,
+				FAF242B61C560C7100A6B7B1 /* JTSSimpleImageDownloader.h */,
+				FAF242B71C560C7100A6B7B1 /* JTSSimpleImageDownloader.m */,
+				FAF242B81C560C7100A6B7B1 /* UIApplication+JTSImageViewController.h */,
+				FAF242B91C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m */,
+				FAF242BA1C560C7100A6B7B1 /* UIImage+JTSImageEffects.h */,
+				FAF242BB1C560C7100A6B7B1 /* UIImage+JTSImageEffects.m */,
+			);
+			name = JTSImageViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,7 +178,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
@@ -161,11 +223,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF242BC1C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m in Sources */,
+				FAF242C01C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m in Sources */,
 				FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */,
+				FAF242BD1C560C7100A6B7B1 /* JTSImageInfo.m in Sources */,
+				FAF242C11C560C7100A6B7B1 /* UIImage+JTSImageEffects.m in Sources */,
 				9C43196B1A0C32D80085829B /* ViewController.swift in Sources */,
 				9C4319691A0C32D80085829B /* AppDelegate.swift in Sources */,
 				FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */,
 				FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */,
+				FAF242A81C560A7F00A6B7B1 /* TimeLineViewController.swift in Sources */,
+				FAF242BE1C560C7100A6B7B1 /* JTSImageViewController.m in Sources */,
+				FAF242AA1C560ADC00A6B7B1 /* TimeLineView.swift in Sources */,
+				FAF242BF1C560C7100A6B7B1 /* JTSSimpleImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +342,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DemoCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoCollection/DemoCollection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -282,9 +355,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DemoCollection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DemoCollection/DemoCollection-Bridging-Header.h";
 			};
 			name = Release;
 		};
