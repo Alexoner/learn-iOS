@@ -5,3 +5,5 @@
 
 #import "JTSImageViewController.h"
 #import "JTSImageInfo.h"
+
+#import "ZLCustomSegmentControlViewController.h"

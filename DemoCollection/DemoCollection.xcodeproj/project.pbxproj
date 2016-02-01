@@ -15,6 +15,9 @@
 		9C4319731A0C32D90085829B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4319711A0C32D90085829B /* LaunchScreen.xib */; };
 		FA8B71941C5F592B00A6ADB6 /* ViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B71931C5F592B00A6ADB6 /* ViewAnimationViewController.swift */; };
 		FA8B71961C5F594500A6ADB6 /* LoginAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B71951C5F594500A6ADB6 /* LoginAnimationViewController.swift */; };
+		FA8B71981C5F5AF700A6ADB6 /* CAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B71971C5F5AF700A6ADB6 /* CAViewController.swift */; };
+		FA8B719A1C5F5BED00A6ADB6 /* ZLCustomSegmentControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8B71991C5F5BED00A6ADB6 /* ZLCustomSegmentControlView.m */; };
+		FA8B719D1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8B719C1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m */; };
 		FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */; };
 		FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */; };
 		FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */; };
@@ -41,6 +44,11 @@
 		9C4319721A0C32D90085829B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FA8B71931C5F592B00A6ADB6 /* ViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationViewController.swift; sourceTree = "<group>"; };
 		FA8B71951C5F594500A6ADB6 /* LoginAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAnimationViewController.swift; sourceTree = "<group>"; };
+		FA8B71971C5F5AF700A6ADB6 /* CAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAViewController.swift; sourceTree = "<group>"; };
+		FA8B71991C5F5BED00A6ADB6 /* ZLCustomSegmentControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCustomSegmentControlView.m; sourceTree = "<group>"; };
+		FA8B719B1C5F5BF500A6ADB6 /* ZLCustomSegmentControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLCustomSegmentControlView.h; sourceTree = "<group>"; };
+		FA8B719C1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCustomSegmentControlViewController.m; sourceTree = "<group>"; };
+		FA8B719E1C5F5D2500A6ADB6 /* ZLCustomSegmentControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLCustomSegmentControlViewController.h; sourceTree = "<group>"; };
 		FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
@@ -137,8 +145,13 @@
 		FA8B71901C5F39B800A6ADB6 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				FA8B719E1C5F5D2500A6ADB6 /* ZLCustomSegmentControlViewController.h */,
+				FA8B719C1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m */,
+				FA8B719B1C5F5BF500A6ADB6 /* ZLCustomSegmentControlView.h */,
+				FA8B71991C5F5BED00A6ADB6 /* ZLCustomSegmentControlView.m */,
 				FA8B71931C5F592B00A6ADB6 /* ViewAnimationViewController.swift */,
 				FA8B71951C5F594500A6ADB6 /* LoginAnimationViewController.swift */,
+				FA8B71971C5F5AF700A6ADB6 /* CAViewController.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -312,14 +325,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8B719D1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m in Sources */,
 				FAF242BC1C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m in Sources */,
 				FAF242C01C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m in Sources */,
 				FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */,
 				FAF242BD1C560C7100A6B7B1 /* JTSImageInfo.m in Sources */,
+				FA8B71981C5F5AF700A6ADB6 /* CAViewController.swift in Sources */,
 				FAF242C11C560C7100A6B7B1 /* UIImage+JTSImageEffects.m in Sources */,
 				9C43196B1A0C32D80085829B /* ViewController.swift in Sources */,
 				9C4319691A0C32D80085829B /* AppDelegate.swift in Sources */,
 				FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */,
+				FA8B719A1C5F5BED00A6ADB6 /* ZLCustomSegmentControlView.m in Sources */,
 				FA8B71961C5F594500A6ADB6 /* LoginAnimationViewController.swift in Sources */,
 				FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */,
 				FAF242A81C560A7F00A6B7B1 /* TimeLineViewController.swift in Sources */,
