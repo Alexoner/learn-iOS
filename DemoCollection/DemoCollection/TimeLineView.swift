@@ -161,6 +161,10 @@ public class TimelineView: UIView {
         setupContent()
     }
     
+    override public func layoutSubviews() {
+        
+    }
+    
     //MARK: Private Methods
     
     private func setupContent(){

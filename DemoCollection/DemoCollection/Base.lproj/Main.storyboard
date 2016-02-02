@@ -310,12 +310,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbm-j6-ftg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="-289"/>
+            <point key="canvasLocation" x="1362" y="-290"/>
         </scene>
         <!--CA-->
         <scene sceneID="heE-J8-hFY">
             <objects>
-                <viewController id="AW9-nG-XSC" sceneMemberID="viewController">
+                <viewController id="AW9-nG-XSC" customClass="CAViewController" customModule="DemoCollection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="soU-8c-cs8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xU6-Yq-Ppd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="338"/>
+            <point key="canvasLocation" x="547" y="-274"/>
         </scene>
         <!--Custom Scroll View Controller-->
         <scene sceneID="9PM-0z-Bie">

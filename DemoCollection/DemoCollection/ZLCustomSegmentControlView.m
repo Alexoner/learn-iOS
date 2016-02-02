@@ -39,7 +39,7 @@
 }
 
 - (void)layoutSubviews{
-    [self customeData];
+    [self customizeData];
     [self createBottomLabels];
     [self createTopLables];
     [self createTopButtons];
@@ -54,7 +54,7 @@
 /**
  *  提供默认值
  */
-- (void)customeData {
+- (void)customizeData {
     if (_titles == nil) {
         _titles = @[@"Test0", @"Test1", @"Test2"];
     }

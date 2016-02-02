@@ -14,6 +14,7 @@ class CAViewController: UIViewController {
     var scrollView: UIScrollView!
     var redLayer: CALayer!
     var imageLayer: CALayer!
+    let items = ["corner", "path", "keyframe", "rotate", "affine", "group", "opacity", ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,11 @@ class CAViewController: UIViewController {
     func setup() {
         setupViews()
         setupLayers()
-        setupAnimation()
+        setupAnimation(items[0])
     }
     
     func setupViews() {
         
-        let items = ["corner", "path", "rotate", "affine"]
         segmentedControl = UISegmentedControl(items: items)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectedSegmentIndex = 0
@@ -37,8 +37,10 @@ class CAViewController: UIViewController {
         segmentedControl.addTarget(self, action: "changeAnimation:", forControlEvents: .ValueChanged)
         segmentedControl.sizeToFit()
         view.addSubview(segmentedControl)
+        //view.insertSubview(segmentedControl, belowSubview: self.navigationController!.view)
+        print ("self.navigationController!.view.frame.height", self.navigationController?.navigationBar.frame.height)
         view.addConstraints([
-            NSLayoutConstraint(item: segmentedControl, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 60),
+            NSLayoutConstraint(item: segmentedControl, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 20 + (self.navigationController?.navigationBar.frame.height)!),
             NSLayoutConstraint(item: segmentedControl, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: segmentedControl, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 40),
             NSLayoutConstraint(item: segmentedControl, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: -40),
@@ -79,7 +81,7 @@ class CAViewController: UIViewController {
         
         redLayer.frame = CGRect(x: 50, y: 0, width: 50, height: 50)
         redLayer.backgroundColor = UIColor.redColor().CGColor
-        self.scrollView.layer.addSublayer(redLayer)
+        //self.scrollView.layer.addSublayer(redLayer)
         
         // set content properties of CALayer
         imageLayer = CALayer()
@@ -105,11 +107,33 @@ class CAViewController: UIViewController {
         redLayer.shadowOffset = CGSizeMake(2, 2)
         redLayer.shadowRadius = 3
         
+        self.scrollView.layer.addSublayer(redLayer)
+        
     }
     
-    func setupAnimation() {
+    func setupAnimation(type: String!) {
         // MARK: animations
-        
+        switch(type) {
+        case "corner":
+            setupAnimationCorner()
+            break
+        case "opacity":
+            setupAnimationOpacity()
+            break
+        case "keyframe":
+            setupAnimationKeyframe()
+            break
+        case "group":
+            setupAnimationGroup()
+            break
+        default:
+            setupAnimationCorner()
+            break
+            
+        }
+    }
+    
+    func setupAnimationCorner() {
         // Create a blank animation using the keyPath "cornerRadius", the property we want to animate
         let animation = CABasicAnimation(keyPath: "cornerRadius")
         
@@ -124,7 +148,56 @@ class CAViewController: UIViewController {
         
         // Finally, add the animation to the layer
         redLayer.addAnimation(animation, forKey: "cornerRadius")
+    }
+    
+    func setupAnimationOpacity() {
+        let fadeAnim = CABasicAnimation(keyPath: "opacity")
+        fadeAnim.fromValue = 1.0;
+        fadeAnim.toValue = 0.0;
+        fadeAnim.duration = 3.0;
         
+        redLayer.addAnimation(fadeAnim, forKey: "opacity")
+    }
+    
+    func setupAnimationKeyframe() {
+        // create a CGPath that implements two arcs ( a bounce)
+        let path:CGMutablePathRef = CGPathCreateMutable()
+        CGPathMoveToPoint(path , nil, 74.0, 74.0)
+        CGPathAddCurveToPoint(path, nil,
+            74.0, 500.0,
+            320.0, 500.0,
+            320.0, 74.0)
+        CGPathAddCurveToPoint(path,nil,320.0,500.0,
+            566.0,500.0,
+            566.0,74.0)
+        
+        // create the animation object, specifying the position property as the key path.
+        let keyframeAnim: CAKeyframeAnimation  = CAKeyframeAnimation(keyPath: "position")
+        keyframeAnim.path = path
+        keyframeAnim.duration = 5.0
+        
+        // add the animation
+        redLayer.addAnimation(keyframeAnim, forKey: "position")
+    }
+    
+    func setupAnimationGroup() {
+        // Animation 1
+        var widthAnim: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "borderWidth")
+        var widthValues: [AnyObject] = [1.0, 10.0, 5.0, 30.0, 0.5, 15.0, 2.0, 50.0, 0.0]
+        widthAnim.values = widthValues
+        widthAnim.calculationMode = kCAAnimationPaced
+        // Animation 2
+        var colorAnim: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "borderColor")
+        var colorValues: [AnyObject] = [UIColor.greenColor().CGColor as! AnyObject, UIColor.redColor().CGColor as! AnyObject, UIColor.blueColor().CGColor as! AnyObject]
+        colorAnim.values = colorValues
+        colorAnim.calculationMode = kCAAnimationPaced
+        // Animation group
+        var group: CAAnimationGroup = CAAnimationGroup()
+        group.animations = [colorAnim, widthAnim]
+        group.duration = 5.0
+        redLayer.addAnimation(group, forKey: "BorderChanges")
+        setupAnimationKeyframe()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -150,6 +223,7 @@ class CAViewController: UIViewController {
         default:
             self.view.backgroundColor = UIColor.purpleColor()
         }
+        setupAnimation(items[sender.selectedSegmentIndex])
     }
     
     /*
