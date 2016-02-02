@@ -1,6 +1,3 @@
-THIS LICENSE AGREEMENT, is between you (the “Licensee”), and Razeware LLC (http://www.raywenderlich.com) (the “Licensor”). By purchasing, downloading, or using any art licensed by Razeware LLC, you agree to the following:
-
-
 Ownership of Work
 
 Licensor owns all proprietary rights in and to all copyrightable works, generally described as game art, all of which are displayed and viewable at http://www.gameartguppy.com (the “Work”), and has the exclusive right to license others to produce, copy, make, or sell the Work.
@@ -30,4 +27,4 @@ Licensee shall fully indemnify, defend, and hold harmless Licensor from and agai
 
 Acknowledgement
 
-YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT AND UNDERSTAND IT PRIOR TO AGREEING TO IT. YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT. YOU FURTHER AGREE THAT IT IS THE COMPLETE AND EXCLUSIVE STATEMENT OF THE AGREEMENT BETWEEN YOU AND RAZEWARE LLC, WHICH SUPERSEDES ANY PROPOSAL OR PRIOR AGREEMENT, ORAL OR WRITTEN, AND ANY OTHER COMMUNICATION BETWEEN YOU AND RAZEWARE LLC RELATING TO THE SUBJECT OF THIS AGREEMENT.
+YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT AND UNDERSTAND IT PRIOR TO AGREEING TO IT. YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT. YOU FURTHER AGREE THAT IT IS THE COMPLETE AND EXCLUSIVE STATEMENT OF THE AGREEMENT BETWEEN YOU AND XXX, WHICH SUPERSEDES ANY PROPOSAL OR PRIOR AGREEMENT, ORAL OR WRITTEN, AND ANY OTHER COMMUNICATION BETWEEN YOU AND XXX RELATING TO THE SUBJECT OF THIS AGREEMENT.

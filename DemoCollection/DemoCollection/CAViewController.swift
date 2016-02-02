@@ -3,7 +3,7 @@
 //  DemoCollection
 //
 //  Created by duhao.dh on 2/1/16.
-//  Copyright © 2016 Razeware LLC. All rights reserved.
+//  Copyright © 2016 . All rights reserved.
 //
 
 import UIKit
@@ -182,17 +182,17 @@ class CAViewController: UIViewController {
     
     func setupAnimationGroup() {
         // Animation 1
-        var widthAnim: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "borderWidth")
-        var widthValues: [AnyObject] = [1.0, 10.0, 5.0, 30.0, 0.5, 15.0, 2.0, 50.0, 0.0]
+        let widthAnim: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "borderWidth")
+        let widthValues: [AnyObject] = [1.0, 10.0, 5.0, 30.0, 0.5, 15.0, 2.0, 50.0, 0.0]
         widthAnim.values = widthValues
         widthAnim.calculationMode = kCAAnimationPaced
         // Animation 2
-        var colorAnim: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "borderColor")
-        var colorValues: [AnyObject] = [UIColor.greenColor().CGColor as! AnyObject, UIColor.redColor().CGColor as! AnyObject, UIColor.blueColor().CGColor as! AnyObject]
+        let colorAnim: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "borderColor")
+        let colorValues: [AnyObject] = [UIColor.greenColor().CGColor as AnyObject, UIColor.redColor().CGColor as AnyObject, UIColor.blueColor().CGColor as AnyObject]
         colorAnim.values = colorValues
         colorAnim.calculationMode = kCAAnimationPaced
         // Animation group
-        var group: CAAnimationGroup = CAAnimationGroup()
+        let group: CAAnimationGroup = CAAnimationGroup()
         group.animations = [colorAnim, widthAnim]
         group.duration = 5.0
         redLayer.addAnimation(group, forKey: "BorderChanges")

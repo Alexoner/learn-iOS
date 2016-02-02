@@ -244,7 +244,7 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Razeware LLC";
+				ORGANIZATIONNAME = None;
 				TargetAttributes = {
 					9C4319621A0C32D80085829B = {
 						CreatedOnToolsVersion = 6.1;
