@@ -164,12 +164,12 @@ class CAViewController: UIViewController {
         let path:CGMutablePathRef = CGPathCreateMutable()
         CGPathMoveToPoint(path , nil, 74.0, 74.0)
         CGPathAddCurveToPoint(path, nil,
-            74.0, 500.0,
-            320.0, 500.0,
-            320.0, 74.0)
-        CGPathAddCurveToPoint(path,nil,320.0,500.0,
-            566.0,500.0,
-            566.0,74.0)
+            74.0, 400.0,
+            160.0, 400.0,
+            160.0, 74.0)
+        CGPathAddCurveToPoint(path,nil,160.0,400.0,
+            246.0,400.0,
+            246.0,74.0)
         
         // create the animation object, specifying the position property as the key path.
         let keyframeAnim: CAKeyframeAnimation  = CAKeyframeAnimation(keyPath: "position")
