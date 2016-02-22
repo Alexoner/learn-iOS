@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PagedScrollViewController: UIViewController {
+class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!

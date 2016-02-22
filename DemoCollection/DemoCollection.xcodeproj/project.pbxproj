@@ -20,6 +20,7 @@
 		FA8B719D1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8B719C1C5F5C0300A6ADB6 /* ZLCustomSegmentControlViewController.m */; };
 		FA8B71A11C5F885E00A6ADB6 /* CustomCoreAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8B71A01C5F885E00A6ADB6 /* CustomCoreAnimationView.m */; };
 		FA8B71A41C5F889A00A6ADB6 /* CustomCoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8B71A31C5F889A00A6ADB6 /* CustomCoreAnimationViewController.m */; };
+		FAC3A1DA1C7AE5D300595CC7 /* PagedTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3A1D91C7AE5D300595CC7 /* PagedTimeLineViewController.swift */; };
 		FAF242A11C5251B300A6B7B1 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */; };
 		FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */; };
 		FAF242A51C55B8DD00A6B7B1 /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */; };
@@ -55,6 +56,7 @@
 		FA8B71A01C5F885E00A6ADB6 /* CustomCoreAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCoreAnimationView.m; sourceTree = "<group>"; };
 		FA8B71A21C5F889A00A6ADB6 /* CustomCoreAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCoreAnimationViewController.h; sourceTree = "<group>"; };
 		FA8B71A31C5F889A00A6ADB6 /* CustomCoreAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCoreAnimationViewController.m; sourceTree = "<group>"; };
+		FAC3A1D91C7AE5D300595CC7 /* PagedTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedTimeLineViewController.swift; sourceTree = "<group>"; };
 		FAF242A01C5251B300A6B7B1 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A21C55B4EB00A6B7B1 /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
 		FAF242A41C55B8DD00A6B7B1 /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				FAF242A71C560A7F00A6B7B1 /* TimeLineViewController.swift */,
 				FAF242A91C560ADC00A6B7B1 /* TimeLineView.swift */,
+				FAC3A1D91C7AE5D300595CC7 /* PagedTimeLineViewController.swift */,
 			);
 			name = TimeLine;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				FA8B71A41C5F889A00A6ADB6 /* CustomCoreAnimationViewController.m in Sources */,
 				FAF242BC1C560C7100A6B7B1 /* JTSAnimatedGIFUtility.m in Sources */,
 				FAF242C01C560C7100A6B7B1 /* UIApplication+JTSImageViewController.m in Sources */,
+				FAC3A1DA1C7AE5D300595CC7 /* PagedTimeLineViewController.swift in Sources */,
 				FAF242A31C55B4EB00A6B7B1 /* CustomScrollViewController.swift in Sources */,
 				FAF242BD1C560C7100A6B7B1 /* JTSImageInfo.m in Sources */,
 				FA8B71981C5F5AF700A6ADB6 /* CAViewController.swift in Sources */,
