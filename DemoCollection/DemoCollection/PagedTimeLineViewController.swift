@@ -15,6 +15,7 @@ class PagedTimeLineViewController: UIViewController, UIScrollViewDelegate {
     var timeline:   TimelineView!
     var timelines: [TimelineView]!
     var currentPage: Int! = -1
+    var nextPage: Int! = -1
     var lastContentOffset: CGPoint! = CGPoint(x: 0, y: 0)
     
     override func viewDidLoad() {
@@ -24,12 +25,14 @@ class PagedTimeLineViewController: UIViewController, UIScrollViewDelegate {
         scrollView = UIScrollView(frame: view.bounds)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.delegate = self
-        scrollView.pagingEnabled = true
+        // a page is the width of scroll view?
+        scrollView.pagingEnabled = false
+
         view.addSubview(scrollView)
         
         view.addConstraints([
             NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 29),
+            NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 30),
             NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: scrollView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: 0)
             ])
@@ -48,11 +51,11 @@ class PagedTimeLineViewController: UIViewController, UIScrollViewDelegate {
         scrollView.addSubview(timeline)
         scrollView.addConstraints([
             NSLayoutConstraint(item: timeline, attribute: .Left, relatedBy: .Equal, toItem: scrollView, attribute: .Left, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: timeline, attribute: .Bottom, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: timeline, attribute: .Top, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: timeline, attribute: .Right, relatedBy: .Equal, toItem: scrollView, attribute: .Right, multiplier: 1.0, constant: 0),
-            
-            NSLayoutConstraint(item: timeline, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1.0, constant: 0)
+            NSLayoutConstraint(item: timeline, attribute: .Top, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: timeline, attribute: .Bottom, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: timeline, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1.0, constant: 0),
+            //NSLayoutConstraint(item: timeline, attribute: .Height, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 1.0, constant: 0),
             ])
         timeline.lineColor = UIColor(red: 104/255, green: 236/255, blue: 206/255, alpha: 1.0)
         timelines.append(timeline)
@@ -70,9 +73,10 @@ class PagedTimeLineViewController: UIViewController, UIScrollViewDelegate {
         scrollView.addConstraints([
             NSLayoutConstraint(item: timeline2, attribute: .Left, relatedBy: .Equal, toItem: scrollView, attribute: .Left, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: timeline2, attribute: .Right, relatedBy: .Equal, toItem: scrollView, attribute: .Right, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: timeline2, attribute: .Top, relatedBy: .Equal, toItem: timelines[0], attribute: .Bottom, multiplier: 1.0, constant: 30),
             NSLayoutConstraint(item: timeline2, attribute: .Bottom, relatedBy: .LessThanOrEqual, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: timeline2, attribute: .Top, relatedBy: .Equal, toItem: timelines[0], attribute: .Bottom, multiplier: 1.0, constant: 5),
-            NSLayoutConstraint(item: timeline2, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1.0, constant: 0)
+            NSLayoutConstraint(item: timeline2, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1.0, constant: 0),
+            //NSLayoutConstraint(item: timeline2, attribute: .Height, relatedBy: .GreaterThanOrEqual, toItem: scrollView, attribute: .Height, multiplier: 1.0, constant: 0),
             ])
         timeline2.lineColor = UIColor(red: 255/255, green: 236/255, blue: 206/255, alpha: 1.0)
         timelines.append(timeline2)
@@ -86,26 +90,36 @@ class PagedTimeLineViewController: UIViewController, UIScrollViewDelegate {
         return true
     }
     
+    // MARK: delegate
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         //
-        //print("scrolled view!", "content offset: ", scrollView.contentOffset, scrollView.frame.size.height)
-        var offset: CGFloat = CGFloat(0.0)
-        if scrollView.contentOffset.y < CGFloat(offset) {
-            return
-        }
-        
-        if scrollView.tracking == true {
-            return
-        }
-        
-        var nextPage: Int = -1
         if lastContentOffset.y < scrollView.contentOffset.y {
             nextPage = currentPage + 1
-            print("scrolled up and next page is: ", nextPage)
+            print("scrolled up, next page is: ", nextPage, scrollView.tracking)
         } else {
             nextPage = currentPage - 1
-            print("scrolled down, next page is: ", nextPage)
+            print("scrolled down, next page is: ", nextPage, scrollView.tracking)
         }
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        //
+    }
+    
+    // at the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
+    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+        //
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        //
+        print("ended dragging", scrollView.tracking)
+        // actually not used here
+        if scrollView.tracking == true {
+            // return
+        }
+        
         lastContentOffset = scrollView.contentOffset
         
         if nextPage < 0 || nextPage > timelines.count - 1 {
@@ -119,9 +133,6 @@ class PagedTimeLineViewController: UIViewController, UIScrollViewDelegate {
             currentPage = nextPage
             scrollView.setContentOffset(CGPoint(x: 0, y: timelines[currentPage].frame.origin.y), animated: true)
         }
-        
-        offset += timelines[nextPage].frame.height
-        
     }
     
     
